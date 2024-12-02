@@ -42,7 +42,7 @@ jobs:
         run: pip install pyinstaller
       - name: Run pyinstaller
         run: |
-          pyinstaller vyxal/__main__.py --name vyxal2
+          pyinstaller vyxal/__main__.py --name vyxal2 --contents-directory ${{ matrix.exe-name }}
       - name: Create zip archive (Linux)
         if: runner.os == 'Linux'
         run: |
