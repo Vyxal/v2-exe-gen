@@ -47,7 +47,7 @@ jobs:
         if: runner.os == 'Linux'
         run: |
           cd dist
-          zip -r ${{ matrix.exe-name }}.zip vyxal2
+          zip -r --symlinks ${{ matrix.exe-name }}.zip vyxal2
       - name: Create zip archive (Windows)
         if: runner.os == 'Windows'
         shell: pwsh
