@@ -5,7 +5,7 @@ on:
       - "v2*"
   workflow_dispatch:
 env:
-  LINUX_NAME: vyxal2
+  LINUX_NAME: vyxal-linux
   WINDOWS_NAME: vyxal-windows
   MACOS_NAME: vyxal-macos
 jobs:
@@ -17,7 +17,7 @@ jobs:
         os: [ubuntu-latest, windows-latest]
         include:
           - os: ubuntu-latest
-            exe-name: vyxal2
+            exe-name: vyxal-linux
           - os: windows-latest
             exe-name: vyxal-windows
         
