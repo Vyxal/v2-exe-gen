@@ -42,12 +42,12 @@ jobs:
         run: pip install pyinstaller
       - name: Run pyinstaller
         run: |
-          pyinstaller vyxal/__main__.py --name vyxal2 --contents-directory ${{ matrix.exe-name }}
+          pyinstaller vyxal/__main__.py --name vyxal2
       - name: Create zip archive (Linux)
         if: runner.os == 'Linux'
         run: |
           cd dist
-          zip -r ${{ matrix.exe-name }}.zip ${{ matrix.exe-name }}
+          zip -r ${{ matrix.exe-name }}.zip vyxal2
       - name: Create zip archive (Windows)
         if: runner.os == 'Windows'
         shell: pwsh
